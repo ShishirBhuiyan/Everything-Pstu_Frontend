@@ -92,7 +92,7 @@
     .second{
         display: flex;
         flex-direction: column;
-        align-items: center;
+        //align-items: center;
         justify-content: center;
         position: absolute;
         top: 100%;
@@ -183,23 +183,40 @@
                             .nav-link{
                                 width: 100%;
                                 border-bottom: 1px solid #fff;
-                                padding: 0 .8rem;
+                                padding: 0 0 0 15px;
                                 a{
-                                    line-height: 2.8rem;
+                                    height: 40px;
                                     color: #fff;
                                     letter-spacing: 1px;
-                                    font-size: .95rem;
+                                    font-size: 20px;
                                 
                                     display: flex;
                                     align-items: center;
                                     justify-content: space-between;
                                     transition: .5s;
+                                    position: relative;
+                                    //background-color: #9aa0a3;
                                     i{
-                                        margin-left: .2rem;
+                                        position: absolute;
+                                        right: 12px;
+                                        //margin-left: .2rem;
                                         transition: all 650ms;
                                         font-size: 1.1rem;
                                         transform: rotate(-90deg);
                                         transition: .7s;
+                                        color: #032b43;
+                                    }
+                                }
+                                a.caretdown{
+                                    width: 100%;
+                                    &::after{
+                                        line-height: 2.8rem;
+                                        content: "";
+                                        height: 100%;
+                                        width: 40px;
+                                        background-color:#fff;
+                                        right: 0;
+                                        top: 0;
                                     }
                                 }
                                 .dropdown{
@@ -207,28 +224,48 @@
                                     top: initial;
                                     left: initial;
                                     transform: initial;
-                                    opacity: 1;
                                     pointer-events: auto;
                                     width: 100%;
                                     background-color: #03334b;
+                                    //height: 0px;
+                                    opacity: 1;
                                     .d-menu1{
+                                        border-top: 2px solid #fff;
                                         display: none;
+                                        //transform: translateY(-100%);
                                         .dropdown-link{
                                             border-left: 2px solid #fff;
                                             padding-left: 30px;
+                                            width: 100%;
                                             .check{
+                                                width: 100%;
                                                 display: flex;
                                                 align-items: center;
                                                 justify-content: space-between;
-                                                a{       
+                                                a{     
+                                                    width: 100%;  
                                                     color: #fff;
-                                                    background-color: transparent;
                                                 }
                                                 i{
                                                     color: #fff;
                                                     transform: rotate(-90deg);
-                                                    margin-right: 30px;
+                                                    margin-right: 10px;
                                                     transition: all 650ms;
+                                                    color: #03334b;
+                                                }
+                                                a.caretdown{
+                                                    position: relative;
+                                                    width: 100%;
+                                                    &::after{
+                                                        position: absolute;
+                                                        line-height: 2.8rem;
+                                                        content: "";
+                                                        height: 100%;
+                                                        width: 40px;
+                                                        background-color: #fff;
+                                                        right: -20px;
+                                                        top: 0;
+                                                    }
                                                 }
                                             }
                                             .dropdown.second{
@@ -238,17 +275,22 @@
                                                 transform: initial;
                                                 opacity: 1;
                                                 pointer-events: auto;
-                                                width: 100%;
+                                                //width: 100%;
                                                 padding:0;
                                                 background-color: #032b43;
                                                 //border-left: 2px solid #fff;
-                                                display: none;
+                                                //display: none;
+                                            }
+                                            .dropdown.second.first{
+                                                .d-menu2{
+                                                    border-top: 2px solid #fff;
+                                                }
                                             }
                                             .dropdown.second.middle{
                                                 background-color: #03334b;
-                                            }
-                                            &:hover > .dropdown.second{
-                                                display: block;
+                                                .d-menu3{
+                                                    border-top: 2px solid #fff;
+                                                }
                                             }
                                             &:hover > .check > i{
                                                 transform: rotate(360deg) !important;
@@ -260,9 +302,6 @@
                                                 font-size: 18px;
                                             }
                                         }
-                                    }
-                                    .d-menu1.active{
-                                        display: block;
                                     }
                                     .arrow{
                                         display: none;

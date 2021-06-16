@@ -111,8 +111,6 @@ section .section_heading i {
 
 .container {
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -269,9 +267,6 @@ section .section_heading i {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -410,14 +405,14 @@ section .section_heading i {
 .row .second .two nav .nav-btn .nav-links ul .nav-link {
   width: 100%;
   border-bottom: 1px solid #fff;
-  padding: 0 .8rem;
+  padding: 0 0 0 15px;
 }
 
 .row .second .two nav .nav-btn .nav-links ul .nav-link a {
-  line-height: 2.8rem;
+  height: 40px;
   color: #fff;
   letter-spacing: 1px;
-  font-size: .95rem;
+  font-size: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -429,10 +424,12 @@ section .section_heading i {
           justify-content: space-between;
   -webkit-transition: .5s;
   transition: .5s;
+  position: relative;
 }
 
 .row .second .two nav .nav-btn .nav-links ul .nav-link a i {
-  margin-left: .2rem;
+  position: absolute;
+  right: 12px;
   -webkit-transition: all 650ms;
   transition: all 650ms;
   font-size: 1.1rem;
@@ -440,6 +437,21 @@ section .section_heading i {
           transform: rotate(-90deg);
   -webkit-transition: .7s;
   transition: .7s;
+  color: #032b43;
+}
+
+.row .second .two nav .nav-btn .nav-links ul .nav-link a.caretdown {
+  width: 100%;
+}
+
+.row .second .two nav .nav-btn .nav-links ul .nav-link a.caretdown::after {
+  line-height: 2.8rem;
+  content: "";
+  height: 100%;
+  width: 40px;
+  background-color: #fff;
+  right: 0;
+  top: 0;
 }
 
 .row .second .two nav .nav-btn .nav-links ul .nav-link .dropdown {
@@ -448,22 +460,25 @@ section .section_heading i {
   left: initial;
   -webkit-transform: initial;
           transform: initial;
-  opacity: 1;
   pointer-events: auto;
   width: 100%;
   background-color: #03334b;
+  opacity: 1;
 }
 
 .row .second .two nav .nav-btn .nav-links ul .nav-link .dropdown .d-menu1 {
+  border-top: 2px solid #fff;
   display: none;
 }
 
 .row .second .two nav .nav-btn .nav-links ul .nav-link .dropdown .d-menu1 .dropdown-link {
   border-left: 2px solid #fff;
   padding-left: 30px;
+  width: 100%;
 }
 
 .row .second .two nav .nav-btn .nav-links ul .nav-link .dropdown .d-menu1 .dropdown-link .check {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -476,17 +491,34 @@ section .section_heading i {
 }
 
 .row .second .two nav .nav-btn .nav-links ul .nav-link .dropdown .d-menu1 .dropdown-link .check a {
+  width: 100%;
   color: #fff;
-  background-color: transparent;
 }
 
 .row .second .two nav .nav-btn .nav-links ul .nav-link .dropdown .d-menu1 .dropdown-link .check i {
   color: #fff;
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
-  margin-right: 30px;
+  margin-right: 10px;
   -webkit-transition: all 650ms;
   transition: all 650ms;
+  color: #03334b;
+}
+
+.row .second .two nav .nav-btn .nav-links ul .nav-link .dropdown .d-menu1 .dropdown-link .check a.caretdown {
+  position: relative;
+  width: 100%;
+}
+
+.row .second .two nav .nav-btn .nav-links ul .nav-link .dropdown .d-menu1 .dropdown-link .check a.caretdown::after {
+  position: absolute;
+  line-height: 2.8rem;
+  content: "";
+  height: 100%;
+  width: 40px;
+  background-color: #fff;
+  right: -20px;
+  top: 0;
 }
 
 .row .second .two nav .nav-btn .nav-links ul .nav-link .dropdown .d-menu1 .dropdown-link .dropdown.second {
@@ -497,18 +529,20 @@ section .section_heading i {
           transform: initial;
   opacity: 1;
   pointer-events: auto;
-  width: 100%;
   padding: 0;
   background-color: #032b43;
-  display: none;
+}
+
+.row .second .two nav .nav-btn .nav-links ul .nav-link .dropdown .d-menu1 .dropdown-link .dropdown.second.first .d-menu2 {
+  border-top: 2px solid #fff;
 }
 
 .row .second .two nav .nav-btn .nav-links ul .nav-link .dropdown .d-menu1 .dropdown-link .dropdown.second.middle {
   background-color: #03334b;
 }
 
-.row .second .two nav .nav-btn .nav-links ul .nav-link .dropdown .d-menu1 .dropdown-link:hover > .dropdown.second {
-  display: block;
+.row .second .two nav .nav-btn .nav-links ul .nav-link .dropdown .d-menu1 .dropdown-link .dropdown.second.middle .d-menu3 {
+  border-top: 2px solid #fff;
 }
 
 .row .second .two nav .nav-btn .nav-links ul .nav-link .dropdown .d-menu1 .dropdown-link:hover > .check > i {
@@ -522,10 +556,6 @@ section .section_heading i {
 
 .row .second .two nav .nav-btn .nav-links ul .nav-link .dropdown .d-menu1 .dropdown-link:hover > .check > a {
   font-size: 18px;
-}
-
-.row .second .two nav .nav-btn .nav-links ul .nav-link .dropdown .d-menu1.active {
-  display: block;
 }
 
 .row .second .two nav .nav-btn .nav-links ul .nav-link .dropdown .arrow {
