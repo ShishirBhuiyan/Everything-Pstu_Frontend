@@ -7,6 +7,7 @@ $(document).ready(function() {
 
     $(".d-btn1").click(function(){
         $(".d-menu1").slideToggle(500);
+        $(".check > i").toggleClass('rotate');
     });
     
 /*     $(".d-btn2").click(function(){

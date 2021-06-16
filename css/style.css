@@ -505,6 +505,11 @@ section .section_heading i {
   color: #03334b;
 }
 
+.row .second .two nav .nav-btn .nav-links ul .nav-link .dropdown .d-menu1 .dropdown-link .check i.rotate {
+  -webkit-transform: rotate(360deg) !important;
+          transform: rotate(360deg) !important;
+}
+
 .row .second .two nav .nav-btn .nav-links ul .nav-link .dropdown .d-menu1 .dropdown-link .check a.caretdown {
   position: relative;
   width: 100%;

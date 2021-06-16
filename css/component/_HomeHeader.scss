@@ -253,6 +253,9 @@
                                                     transition: all 650ms;
                                                     color: #03334b;
                                                 }
+                                                i.rotate{
+                                                    transform: rotate(360deg) !important;
+                                                }
                                                 a.caretdown{
                                                     position: relative;
                                                     width: 100%;
