@@ -113,6 +113,7 @@ section .section_heading i {
   width: 100%;
   margin-right: auto;
   margin-left: auto;
+  border: 2px solid red;
 }
 
 /* ======== Global End ========= */
@@ -131,6 +132,7 @@ section .section_heading i {
       -ms-flex-pack: center;
           justify-content: center;
   position: relative;
+  height: 45vh;
   /*     &::after{
         content: "";
         position: absolute;
