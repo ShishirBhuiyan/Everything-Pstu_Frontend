@@ -116,6 +116,7 @@ section .section_heading i {
   margin-right: auto;
   margin-left: auto;
   border: 2px solid red;
+  background-color: chartreuse;
 }
 
 /* ======== Global End ========= */
