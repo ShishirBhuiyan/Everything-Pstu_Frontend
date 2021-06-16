@@ -111,8 +111,6 @@ section .section_heading i {
 
 .container {
   width: 100%;
-  margin-right: auto;
-  margin-left: auto;
   border: 2px solid red;
 }
 
@@ -132,7 +130,7 @@ section .section_heading i {
       -ms-flex-pack: center;
           justify-content: center;
   position: relative;
-  height: 45vh;
+  height: 35vh;
   /*     &::after{
         content: "";
         position: absolute;
