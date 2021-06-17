@@ -162,8 +162,53 @@ section .section_heading i {
   height: 100%;
 }
 
-.row .banner .one .box, .row .banner .two .box, .row .banner .three .box, .row .banner .four .box {
+.row .banner .one .box h1, .row .banner .two .box h1, .row .banner .three .box h1, .row .banner .four .box h1 {
+  font-size: 20px;
+}
+
+.row .banner .one .box p, .row .banner .two .box p, .row .banner .three .box p, .row .banner .four .box p {
   display: none;
+}
+
+.row .banner .one .box span, .row .banner .two .box span, .row .banner .three .box span, .row .banner .four .box span {
+  position: absolute;
+  background-color: red;
+  height: 3px;
+  width: 40%;
+  left: 0;
+  bottom: 0;
+}
+
+.row .banner .one .box1, .row .banner .one .box3, .row .banner .two .box1, .row .banner .two .box3, .row .banner .three .box1, .row .banner .three .box3, .row .banner .four .box1, .row .banner .four .box3 {
+  display: block;
+  position: absolute;
+  width: 250px;
+  color: #fff;
+  top: 10px;
+  left: 50px;
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+  -webkit-animation: textUp 12s linear infinite;
+          animation: textUp 12s linear infinite;
+  background-color: black;
+  opacity: 0.8;
+  padding: 10px;
+}
+
+.row .banner .one .box2, .row .banner .one .box4, .row .banner .two .box2, .row .banner .two .box4, .row .banner .three .box2, .row .banner .three .box4, .row .banner .four .box2, .row .banner .four .box4 {
+  display: block;
+  position: absolute;
+  width: 250px;
+  color: #fff;
+  top: 10px;
+  right: 50px;
+  -webkit-transform: translateX(-100px);
+          transform: translateX(-100px);
+  -webkit-animation: textUp 12s linear infinite;
+          animation: textUp 12s linear infinite;
+  background-color: black;
+  opacity: 0.8;
+  padding: 10px;
 }
 
 .row .banner .one .box.box1, .row .banner .two .box.box1, .row .banner .three .box.box1, .row .banner .four .box.box1 {
@@ -1133,8 +1178,10 @@ section .section_heading i {
   }
   .row .banner .one .box h1, .row .banner .two .box h1, .row .banner .three .box h1, .row .banner .four .box h1 {
     margin-bottom: 20px;
+    font-size: 30px;
   }
   .row .banner .one .box p, .row .banner .two .box p, .row .banner .three .box p, .row .banner .four .box p {
+    display: block;
     font-size: 14px;
     line-height: 18px;
     margin-top: 20px;
@@ -1148,33 +1195,11 @@ section .section_heading i {
     bottom: 55%;
   }
   .row .banner .one .box1, .row .banner .one .box3, .row .banner .two .box1, .row .banner .two .box3, .row .banner .three .box1, .row .banner .three .box3, .row .banner .four .box1, .row .banner .four .box3 {
-    display: block;
-    position: absolute;
     width: 400px;
-    color: #fff;
-    top: 10px;
-    left: 50px;
-    -webkit-transform: translateY(100px);
-            transform: translateY(100px);
-    -webkit-animation: textUp 12s linear infinite;
-            animation: textUp 12s linear infinite;
-    background-color: black;
-    opacity: 0.8;
     padding: 15px 20px;
   }
   .row .banner .one .box2, .row .banner .one .box4, .row .banner .two .box2, .row .banner .two .box4, .row .banner .three .box2, .row .banner .three .box4, .row .banner .four .box2, .row .banner .four .box4 {
-    display: block;
-    position: absolute;
     width: 400px;
-    color: #fff;
-    top: 10px;
-    right: 50px;
-    -webkit-transform: translateX(-100px);
-            transform: translateX(-100px);
-    -webkit-animation: textUp 12s linear infinite;
-            animation: textUp 12s linear infinite;
-    background-color: black;
-    opacity: 0.8;
     padding: 15px 20px;
   }
   .row .first {
