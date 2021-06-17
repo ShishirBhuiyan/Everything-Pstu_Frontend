@@ -1133,7 +1133,6 @@ section .section_heading i {
   }
   .row .banner .one .box h1, .row .banner .two .box h1, .row .banner .three .box h1, .row .banner .four .box h1 {
     margin-bottom: 20px;
-    z-index: 2;
   }
   .row .banner .one .box p, .row .banner .two .box p, .row .banner .three .box p, .row .banner .four .box p {
     font-size: 14px;
