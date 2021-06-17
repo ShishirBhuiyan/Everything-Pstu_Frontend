@@ -185,7 +185,7 @@ section .section_heading i {
   width: 250px;
   color: #fff;
   top: 10px;
-  left: 50px;
+  left: 30px;
   -webkit-transform: translateY(100px);
           transform: translateY(100px);
   -webkit-animation: textUp 12s linear infinite;
@@ -201,7 +201,7 @@ section .section_heading i {
   width: 250px;
   color: #fff;
   top: 10px;
-  right: 50px;
+  right: 30px;
   -webkit-transform: translateX(-100px);
           transform: translateX(-100px);
   -webkit-animation: textUp 12s linear infinite;
