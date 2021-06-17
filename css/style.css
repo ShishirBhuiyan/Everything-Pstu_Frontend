@@ -134,17 +134,6 @@ section .section_heading i {
           justify-content: center;
   position: relative;
   height: 35vh;
-  /*     &::after{
-        content: "";
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        background-color: black;
-        opacity: 0.5;
-        top: 0;
-        left: 0;
-        z-index: 2;
-    }  */
 }
 
 .row .banner {
@@ -217,51 +206,6 @@ section .section_heading i {
           animation: slideFour 12s linear infinite;
 }
 
-.row .first {
-  z-index: 3;
-}
-
-.row .first .item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: 5px 0px;
-}
-
-.row .first .item .image {
-  height: 150px;
-  width: 150px;
-}
-
-.row .first .item .image img {
-  border-radius: 50%;
-  height: 150px;
-  width: 150px;
-}
-
-.row .first .item .heading h3 {
-  background-color: black;
-  opacity: 0.8;
-  padding: 5px 10px;
-  font-size: 20px;
-  font-weight: 700;
-  color: #fcf9f9;
-}
-
-.row .first .item .heading h3.two {
-  display: none;
-}
-
 .row .second {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -290,6 +234,7 @@ section .section_heading i {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   background-color: #032b43;
+  padding: 5px;
   border-bottom: 1px solid #fff;
 }
 
@@ -622,6 +567,76 @@ section .section_heading i {
           transform: translateY(0%);
 }
 
+.row .first {
+  width: 100%;
+  z-index: 2;
+  position: absolute;
+  bottom: 0;
+  padding: 5px;
+}
+
+.row .first .item.one {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.row .first .item.one .image {
+  height: 90px;
+  width: 90px;
+}
+
+.row .first .item.one .image img {
+  height: 90px;
+  width: 90px;
+}
+
+.row .first .item.one .heading {
+  margin-left: 10px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  color: #fff;
+}
+
+.row .first .item.one .heading h3.one {
+  display: block;
+  font-size: 26px;
+}
+
+.row .first .item.one .heading h3.two {
+  display: none;
+}
+
+.row .first .item.two {
+  width: 95%;
+  font-size: 16px;
+  padding: 5px 0px;
+  color: #fff;
+  margin: 0 auto;
+}
+
+.row .overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(3, 7, 7, 0.5);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
 @-webkit-keyframes slideOne {
   0% {
     visibility: visible;
@@ -768,23 +783,23 @@ section .section_heading i {
 
 @-webkit-keyframes textUp {
   10% {
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
   }
   100% {
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
   }
 }
 
 @keyframes textUp {
   10% {
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
   }
   100% {
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
   }
 }
 
@@ -830,25 +845,6 @@ section .section_heading i {
   .row {
     height: 55vh;
   }
-  .row .first {
-    -webkit-transform: translateY(20%);
-            transform: translateY(20%);
-  }
-  .row .first .item .image {
-    height: 200px;
-    width: 200px;
-  }
-  .row .first .item .image img {
-    border-radius: 50%;
-    height: 200px;
-    width: 200px;
-  }
-  .row .first .item .heading h3.one {
-    display: none;
-  }
-  .row .first .item .heading h3.two {
-    display: block;
-  }
   .row .second {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -880,7 +876,7 @@ section .section_heading i {
   .row .second .two nav {
     display: block !important;
     position: unset;
-    height: 40px;
+    height: 45px;
     width: 100%;
     -webkit-transform: translateY(0%);
             transform: translateY(0%);
@@ -902,7 +898,7 @@ section .section_heading i {
     max-width: 80%;
   }
   .row .second .two nav .nav-btn .nav-links ul {
-    height: 40px;
+    height: 45px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -916,6 +912,7 @@ section .section_heading i {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    border: none;
   }
   .row .second .two nav .nav-btn .nav-links ul .nav-link {
     position: relative;
@@ -938,6 +935,19 @@ section .section_heading i {
     -webkit-transition: .5s;
     transition: .5s;
     padding: 0;
+  }
+  .row .second .two nav .nav-btn .nav-links ul .nav-link a i {
+    right: 15px;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    color: #edeff0;
+    font-size: 15px;
+  }
+  .row .second .two nav .nav-btn .nav-links ul .nav-link a.caretdown {
+    width: 100%;
+  }
+  .row .second .two nav .nav-btn .nav-links ul .nav-link a.caretdown::after {
+    display: none;
   }
   .row .second .two nav .nav-btn .nav-links ul .nav-link .dropdown {
     position: absolute;
@@ -966,6 +976,7 @@ section .section_heading i {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    border: none;
   }
   .row .second .two nav .nav-btn .nav-links ul .nav-link .dropdown .d-menu1 .dropdown-link {
     position: relative;
@@ -974,7 +985,23 @@ section .section_heading i {
     -webkit-transition: .3s;
     transition: .3s;
     border: none;
-    padding-left: 0px;
+    padding-left: 0px !important;
+    /* 
+                                                a{
+                                                    padding-left: 20px;
+                                                    line-height: 2rem;
+                                                    display: flex;
+                                                    color: #fff; 
+                                                    font-size: .9rem;
+                                                    align-items: center;
+                                                    justify-content: space-between;
+                                                    transition: .3s; 
+                                                }
+                                                a.caretdown{
+                                                    &::after{
+                                                        display: none;
+                                                    }
+                                                } */
   }
   .row .second .two nav .nav-btn .nav-links ul .nav-link .dropdown .d-menu1 .dropdown-link a {
     padding-left: 20px;
@@ -992,6 +1019,23 @@ section .section_heading i {
             justify-content: space-between;
     -webkit-transition: .3s;
     transition: .3s;
+  }
+  .row .second .two nav .nav-btn .nav-links ul .nav-link .dropdown .d-menu1 .dropdown-link .check {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .row .second .two nav .nav-btn .nav-links ul .nav-link .dropdown .d-menu1 .dropdown-link .check i {
+    color: #fff;
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+  }
+  .row .second .two nav .nav-btn .nav-links ul .nav-link .dropdown .d-menu1 .dropdown-link .check a.caretdown::after {
+    display: none;
   }
   .row .second .two nav .nav-btn .nav-links ul .nav-link .dropdown .d-menu1 .dropdown-link .dropdown.second {
     -webkit-transform: translateX(15px);
@@ -1055,7 +1099,7 @@ section .section_heading i {
     pointer-events: auto;
   }
   .row .second .two nav .nav-btn .log-sign {
-    margin-top: -15px;
+    margin-top: -10px;
     height: 60px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1069,7 +1113,7 @@ section .section_heading i {
   }
   .row .second .two nav .nav-btn .log-sign .btn {
     display: inline-block;
-    padding: .4rem 1.3rem;
+    padding: .5rem 1.3rem;
     font-size: .8rem;
     border: 2px solid #fff;
     border-radius: 2rem;
@@ -1089,6 +1133,7 @@ section .section_heading i {
   }
   .row .banner .one .box h1, .row .banner .two .box h1, .row .banner .three .box h1, .row .banner .four .box h1 {
     margin-bottom: 20px;
+    z-index: 2;
   }
   .row .banner .one .box p, .row .banner .two .box p, .row .banner .three .box p, .row .banner .four .box p {
     font-size: 14px;
@@ -1108,10 +1153,10 @@ section .section_heading i {
     position: absolute;
     width: 400px;
     color: #fff;
-    top: 70px;
+    top: 10px;
     left: 50px;
-    -webkit-transform: translateX(100px);
-            transform: translateX(100px);
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
     -webkit-animation: textUp 12s linear infinite;
             animation: textUp 12s linear infinite;
     background-color: black;
@@ -1123,7 +1168,7 @@ section .section_heading i {
     position: absolute;
     width: 400px;
     color: #fff;
-    top: 70px;
+    top: 10px;
     right: 50px;
     -webkit-transform: translateX(-100px);
             transform: translateX(-100px);
@@ -1132,6 +1177,29 @@ section .section_heading i {
     background-color: black;
     opacity: 0.8;
     padding: 15px 20px;
+  }
+  .row .first {
+    bottom: 11%;
+  }
+  .row .first .item.one .image {
+    height: 100px;
+    width: 100px;
+  }
+  .row .first .item.one .image img {
+    height: 100px;
+    width: 100px;
+  }
+  .row .first .item.one .heading h3.one {
+    display: none;
+  }
+  .row .first .item.one .heading h3.two {
+    font-size: 30px;
+    display: block;
+  }
+  .row .first .item.two {
+    width: 80%;
+    font-size: 20px;
+    padding-bottom: 10px;
   }
 }
 
