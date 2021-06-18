@@ -119,20 +119,157 @@ section .section_heading i {
 
 /* ======== Global End ========= */
 header {
-  width: 80%;
-  background-color: violet;
+  width: 95%;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   border: 2px solid yellowgreen;
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
   -webkit-transition: -webkit-transform 650ms;
   transition: -webkit-transform 650ms;
   transition: transform 650ms;
   transition: transform 650ms, -webkit-transform 650ms;
   margin: 0 auto;
+  z-index: 10;
+  padding: 10px;
+  background-color: #03334b;
+}
+
+header .top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 2px solid yellowgreen;
+  position: relative;
+}
+
+header .top .toggle {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  background-color: #fff;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header .top .toggle .line {
+  width: 1.6rem;
+  height: 3px;
+  border-radius: 3px;
+  background-color: black;
+  z-index: 5;
+  -webkit-transition: .5s;
+  transition: .5s;
+  position: relative;
+}
+
+header .top .toggle .line:before,
+header .top .toggle .line:after {
+  content: "";
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  background-color: black;
+  border-radius: 3px;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+header .top .toggle .line:before {
+  -webkit-transform: translateY(-7px);
+          transform: translateY(-7px);
+}
+
+header .top .toggle .line:after {
+  -webkit-transform: translateY(7px);
+          transform: translateY(7px);
+}
+
+header .top .image {
+  height: 90px;
+  width: 90px;
+}
+
+header .top .image img {
+  height: 90px;
+  width: 90px;
+}
+
+header .top .heading {
+  margin-left: 10px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  color: #fff;
+}
+
+header .top .heading h3.one {
+  display: block;
+  font-size: 26px;
+}
+
+header .top .heading h3.two {
+  display: none;
+}
+
+header .bottom {
+  width: 95%;
+  font-size: 16px;
+  padding: 5px 0px;
+  color: #fff;
+  margin: 0 auto;
+}
+
+header .navigation {
+  overflow: hidden;
+  border: 2px solid red;
+  background-color: chartreuse;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  left: 0;
+  right: 0;
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all .75s;
+  transition: all .75s;
+  height: 300px;
+  pointer-events: none;
+}
+
+header .navigation nav {
+  color: red;
+}
+
+header .navigation.open {
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  opacity: 1;
+  visibility: visible;
+  pointer-events: painted;
 }
 
 header.open {
@@ -142,9 +279,7 @@ header.open {
 
 .rows.one {
   margin-bottom: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -705,14 +840,9 @@ header.open {
   z-index: 1;
 }
 
-.rows.two {
-  /*     margin-bottom: 30px;
-    height: 60vh; */
-}
-
 .rows.last {
   margin-bottom: 30px;
-  height: 100vh;
+  height: 200vh;
 }
 
 @-webkit-keyframes slideOne {

@@ -4,6 +4,9 @@ $(document).ready(function() {
     $('.toggle').click(function(){
        $('nav').toggleClass('active');
     }); 
+    $('.ok').click(function(){
+        $('.navigation').toggleClass('open');
+     }); 
 
     $(".d-btn1").click(function(){
         $(".d-menu1").slideToggle(500);
