@@ -10,6 +10,18 @@ $(document).ready(function() {
         $(".check > i").toggleClass('rotate');
     });
 
+
+
+
+    $(window).scroll(function(){
+        var scrolls = $(window).scrollTop();
+        if(scrolls >= 300){
+            $('header').addClass('open');
+         } else{
+            $('header').removeClass('open');
+         }
+    }); 
+
 });
 // Owl Carousel End..................
 

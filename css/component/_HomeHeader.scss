@@ -1,10 +1,32 @@
-.row{
+// First Rows
+
+
+header{
+    width: 80%;
+    background-color: violet;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    border: 2px solid yellowgreen;
+    transform: translateY(-100%);
+    transition: transform 650ms;
+    margin: 0 auto;
+}
+header.open{
+    transform: translateY(0%);
+}
+
+
+
+.rows.one{
+    margin-bottom: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     position: relative;
-    height: 35vh;
+    height: 250px;
     .banner{
         position: absolute;
         top: 0;
@@ -408,6 +430,19 @@
 }
 
 
+// Second Rows
+.rows.two{
+/*     margin-bottom: 30px;
+    height: 60vh; */
+}
+
+// Last Rows
+.rows.last{
+    margin-bottom: 30px;
+    height: 100vh;
+}
+
+
 
 
 
@@ -444,8 +479,16 @@
 
 
 @mixin lg-nav {
-    .row{
-        height: 55vh;
+
+    .rows.two{
+        //height: 70vh;
+    }
+
+
+
+
+    .rows.one{
+        height:400px;
 
         .second{
             display: flex;
@@ -463,10 +506,10 @@
                 overflow:visible;
                 nav{
                     display: block !important;
-                    position: unset;
+                    position: sticky !important;
                     height: 45px;
                     width: 100%;
-                    transform: translateY(0%);
+                    transform: unset;
                     .nav-btn{
                         display: flex;
                         justify-content: space-around;
@@ -815,7 +858,6 @@
         transform: translateY(0px);
     }
 }
-
 @keyframes Down {
     10%{
         transform: translateX(0px);

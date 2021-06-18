@@ -1,4 +1,4 @@
-.container{
+.containers{
     width:100%;
     padding-right:15px;
     padding-left:15px;
@@ -7,22 +7,22 @@
 }
 
 @mixin sm_container {
-    .container{
+    .containers{
       max-width: 640px;
     }
 }
 @mixin md_container {
-    .container{
+    .containers{
       max-width: 800px;
     }
 }
 @mixin lg_container {
-    .container{
+    .containers{
       max-width: 1050px;
     }
 }
 @mixin xl_container {
-    .container{
+    .containers{
       max-width: 1240px;
     }
 }
