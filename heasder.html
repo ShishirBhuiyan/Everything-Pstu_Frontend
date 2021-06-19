@@ -1,0 +1,442 @@
+<header>
+    <div class="top">
+        <div class="toggles ok">
+            <div class="line"></div>
+        </div>
+        <div class="image">
+            <img src="./image/Logo.jpg" alt="">
+        </div>
+        <div class="heading">
+            <h3 class="one">PSTU</h3>
+            <h3 class="two">Patuakhali Science And Technology University</h3>
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="example1">
+            <marquee behavior="scroll" direction="left" scrollamount="4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime repellat officia ipsam nisi vel molestiae neque qui exercitationem quasi autem rerum, repudiandae, eligendi, eius ut architecto illo! Deleniti, consequuntur cupiditate.</marquee>
+        </div>
+    </div>
+    <div class="navigation">
+        <div class="nav">
+            <div class="start">
+                <div class="links">
+                    <ul class="nav-ul">
+                        <li class="nav-links normal"><a href="#"><span>Home</span></a></li>
+                        <li class="nav-links normal"><a href="#"><span>About</span></a></li>
+                        <li class="nav-links normal"><a href="#"><span>Blog</span></a></li>
+                        <li class="nav-links normal"><a href="#"><span>Contact</span></a></li>
+
+                        <li class="nav-links dropdown">
+                            <a href="#" class="span-arrow">
+                                <span>Services</span>
+                                <i class="fas fa-caret-down"></i>
+                            </a>
+                            <ul class="dropdown-ul primary">
+                                <li class="dropdown-link normal"><a href="#"><span>Dropdown 1</span></a></li>
+                                <li class="dropdown-link normal"><a href="#"><span>Dropdown 1</span></a></li>
+                                <li class="dropdown-link dropdown">
+                                    <a href="#" class="span-arrow" id="two">
+                                        <span>More</span>
+                                        <i class="fas fa-caret-down"></i>
+                                    </a>
+                                    <ul class="dropdown-ul secondary">
+                                        <li class="dropdown-link normal"><a href="#"><span>Dropdown 2</span></a></li>
+                                        <li class="dropdown-link normal"><a href="#"><span>Dropdown 2</span></a></li>
+                                    </ul>
+                                </li>
+                                <div class="arrow"></div>
+                            </ul>
+                        </li>
+
+                        <li class="nav-links normal"><a href="#"><span>Faculty</span></a></li>
+                    </ul>
+                </div>
+                <div class="login">
+                    <a href="" class="btn">LogIn</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+header{
+    width: 95%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    border: 2px solid yellowgreen;
+    transform: translateY(0%);
+    transition: transform 650ms;
+    margin: 0 auto;
+    z-index: 30;
+    padding: 10px;
+    background-color: #03334b;
+    display: none;
+    .top{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid yellowgreen;
+        position: relative;
+        .toggles{
+            position: absolute;
+            height: 40px;
+            width: 40px;
+            background-color: #fff;
+            right: 10px;
+            top: 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .line{
+                width: 1.6rem;
+                height: 3px;
+                border-radius: 3px;
+                background-color: black;
+                z-index: 5;
+                transition: .5s;
+                position: relative;
+            }
+            .line:before,
+            .line:after{
+                content: "";
+                position: absolute;
+                width: inherit;
+                height: inherit;
+                background-color: black;
+                border-radius: 3px;
+                transition: .5s;
+            }
+            .line:before{
+                transform: translateY(-7px);
+            }
+            .line:after{
+                transform: translateY(7px);
+            }
+        }
+        .image{
+            height: 90px;
+            width: 90px;
+            img{
+                height: 90px;
+                width: 90px;
+            }
+        }
+        .heading{
+            margin-left: 10px;
+            align-self: flex-end;
+            color: #fff;
+            h3.one{
+              display: block;
+              font-size: 26px;
+            }
+
+            h3.two{
+              display: none;
+            }
+        }
+    }
+    .bottom{
+        width: 95%;
+        font-size: 16px;
+        padding:5px 0px;
+        color: #fff;
+        margin: 0 auto;
+    }
+    .navigation{
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        left: 0;
+        right: 0;
+        transform: translateY(20px);
+        opacity: 0;
+        transition: all .75s;
+        .nav{
+            cursor: pointer;
+            //background-color: rgb(48, 48, 48);
+            color: rgb(255, 0, 0);
+            .start{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+                transition: .75s;
+                .links{
+                    flex: initial;
+                    width: 100%;
+                    .nav-ul{
+                        flex-direction: column;
+                        .nav-links{
+                            width: 100%;
+                            background-color: #032b43;
+                            border-bottom: 1px solid #fff;
+                            a{
+                                padding:7px 10px;
+                                letter-spacing: 1px;
+                                font-size: 17px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                transition: .5s;
+                                position: relative;
+                                span{
+                                    color: #fff;
+                                }
+                                i{
+                                    position: absolute;
+                                    color: #032b43;
+                                    right: 12px;
+                                    transition: all 650ms;
+                                    transform: rotate(0deg);
+                                    z-index: 2;
+                                }
+                            }
+                        }
+                        .nav-links.dropdown{
+                            overflow: hidden;
+                            .span-arrow{
+                                &::after{
+                                    content: "";
+                                    position: absolute;
+                                    right: 0;
+                                    top: 0;
+                                    line-height: 2.8rem;
+                                    height: 100%;
+                                    width: 40px;
+                                    background-color:#fff;
+                                    z-index: 1;
+                                }
+                                i.change{
+                                    transform: rotate(-180deg);
+                                }
+
+                            }
+                            .dropdown-ul.primary{
+                                height: 0;
+                                transition: .3s ease-in;
+                                transform: translateX(-100%);
+                                .dropdown-link{
+                                    width: 100%;
+                                    background-color: #1c5980;
+                                    padding-left: 15px;
+                                    border-top: 1px solid #fff;
+                                    .span-arrow{
+                                        padding:7px 10px;
+                                        letter-spacing: 1px;
+                                        font-size: 17px;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: space-between;
+                                        transition: .5s;
+                                        position: relative;
+                                        span{
+                                            color: #fff;
+                                        }
+                                        i{
+                                            position: absolute;
+                                            color: #032b43;
+                                            right: 12px;
+                                            transition: all 650ms;
+                                            transform: rotate(0deg);
+                                            z-index: 2;
+                                        }
+                                        i.change{
+                                            transform: rotate(-180deg);
+                                        }
+                                    }
+                                }
+                                .dropdown-link.dropdown{
+                                    .dropdown-ul.secondary{
+                                        height: 0;
+                                        transition: .3s ease-in;
+                                        transform: translateX(100%);
+                                        margin-left: -15px !important;
+                                        .dropdown-link{
+                                            padding-left: 40px;
+                                            background-color: #032b43;
+                                        }
+                                    }
+
+    /*                                 &:hover .dropdown-ul.secondary{
+                                        height: 100%;
+                                        transform: translateX(0%);
+                                    } */
+                                    .dropdown-ul.secondary.active{
+                                        height: 100%;
+                                        transform: translateX(0%);
+                                    }
+                                }
+                            }
+                            .dropdown-ul.primary.active{
+                                height: 100%;
+                                transform: translateX(0%);
+                            }
+
+/*                             &:hover .dropdown-ul.primary{
+                                height: 100%;
+                                transform: translateX(0%);
+                            } */
+                        }
+                    }
+                }
+                .login{
+                    width: 100%;
+                    background-color: #032b43;
+                    height: 60px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-bottom: 1px solid #fff;
+                    .btn{
+                        display: inline-block;
+                        padding: .5rem 1.3rem;
+                        font-size: .8rem;
+                        border: 2px solid #fff;
+                        border-radius: 2rem;
+                        line-height: 1;
+                        margin: 0 .2rem;
+                        transition: .3s;
+                        text-transform: uppercase;
+                        color: #fff;
+                        font-weight: bold;
+                        &:hover{
+                            color: #032b43;
+                            background-color: #fff;
+                            border: 2px solid #032b43;
+                        }
+                    }
+                        
+                    .btn.solid, .btn.transparent:hover{
+                        background-color: #fff;
+                        color: cyan;
+                    }
+                    
+                    .btn.transparent, .btn.solid:hover{
+                        background-color: transparent;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+
+    .navigation.open{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+
+}
+header.open{
+    transform: translateY(0%);
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Owl Carousel Start..................
+$(document).ready(function() {
+
+    $('.toggle').click(function(){
+       $('nav').toggleClass('active');
+    }); 
+
+
+    $('.ok').click(function(){
+        $('.navigation').toggleClass('open');
+    }); 
+
+    $('.normal').click(function(){
+
+        $('.navigation').toggleClass('open');
+
+        if(this.parentElement){
+            $(this.parentElement).toggleClass('active');
+            if(this.parentElement.parentElement){
+                $(this.parentElement.parentElement.firstElementChild.lastElementChild).toggleClass('change');
+            }
+        }
+        if(this.parentElement.offsetParent){
+            $(this.parentElement.offsetParent).toggleClass('active');
+            if(this.parentElement.offsetParent.previousElementSibling.lastElementChild){
+                $(this.parentElement.offsetParent.previousElementSibling.lastElementChild).toggleClass('change') 
+            }
+        }
+    });
+
+
+    $(".span-arrow").click(function(){
+       $(this.lastElementChild).toggleClass('change');
+       $(this.nextElementSibling).toggleClass('active');
+    });
+
+    $(window).scroll(function(){
+        var scrolls = $(window).scrollTop();
+        if(scrolls >= 330){
+            $('header').addClass('open');
+         } else{
+            $('header').removeClass('open');
+         }
+    }); 
+    
+   $(".d-btn1").click(function(){
+        $(".d-menu1").slideToggle(500);
+        $(".check > i").toggleClass('rotate');
+    }); 
+
+});
+// Owl Carousel End..................
+
+
+
+
+
+
+
