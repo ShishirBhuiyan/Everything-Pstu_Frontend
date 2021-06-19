@@ -13,6 +13,13 @@ $(document).ready(function() {
         $(".check > i").toggleClass('rotate');
     });
 
+    
+    $(".span-arrow").click(function(e){
+       console.log(this.nextElementSibling);
+       $(this.nextElementSibling).toggleClass('active');
+    });
+
+
 
 
 
